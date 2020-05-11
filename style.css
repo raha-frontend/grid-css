@@ -46,6 +46,10 @@ a {
     text-align: center;
 }
 
+.span {
+    display: block;
+}
+
 .grid-item-beige a {
     color: #000;
     border: 1px solid #000;
@@ -145,11 +149,19 @@ button {
 .grid-item-human {
     background-image: url(./images/bg-5.jpg);
     grid-area: f;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    min-height: 715px;
 }
 
 .grid-item-green {
     background-image: url(./images/bg-6.jpg);
     grid-area: g;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    min-height: 715px;
 }
 
 .list {
@@ -169,6 +181,7 @@ button {
     height: 45px;
     display: block;
     border: none;
+    margin-top: 0;
 }
 
 .list li a.list-fc {
