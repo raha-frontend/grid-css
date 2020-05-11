@@ -20,6 +20,13 @@ h2, h3, h4 {
     letter-spacing: 1px;
 }
 
+@media (max-width: 1000px) {
+    h2, h3, h4 {
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+}
+
 h2 span, h3 span, h4 span {
     font-weight: 900;
 }
@@ -30,8 +37,21 @@ p {
     margin-bottom: 0;
 }
 
+@media (max-width: 1000px) {
+    p {
+    font-size: 13px;
+    line-height: 22px;
+    }
+}
+
 a, input, textarea {
     font-size: 16.57px;
+}
+
+@media (max-width: 1000px) {
+    a, input, textarea {
+        font-size: 13px;
+    }
 }
 
 a {
@@ -46,8 +66,26 @@ a {
     text-align: center;
 }
 
+@media (max-width: 1000px) {
+    a {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    a {
+        margin: 25px auto 0;
+    }
+}
+
 .span {
     display: block;
+}
+
+@media (max-width: 1000px) {
+    .span {
+        display: initial;
+    }
 }
 
 .grid-item-beige a {
@@ -64,6 +102,12 @@ button {
     border: none;
     margin-bottom: 64px;
     cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    button {
+        margin-bottom: 30px;
+    }
 }
 
 .form {
@@ -105,6 +149,12 @@ button {
     padding: 60px 55px 70px 55px;
 }
 
+@media (max-width: 1000px) {
+    .grid-item-gray, .grid-item-blue, .grid-item-beige, .grid-item-black, .grid-item-human, .grid-item-green {
+        padding: 40px 30px;
+    }
+}
+
 .grid-item-blue, .grid-item-black, .grid-item-human, .grid-item-green {
     color: #fff;
 }
@@ -113,12 +163,24 @@ button {
     margin-bottom: 70px;
 }
 
+@media (max-width: 1000px) {
+    .grid-item-blue div:last-child {
+        margin-bottom: 10px;
+    }
+}
+
 .grid {
     display: grid;
     grid-template-areas: "a a a a a a b b b"
                         "c c c c d d d d d"
                         "c c c c e e e e e"
-                        "f f f g g g g g g"
+                        "f f f g g g g g g";
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-areas: "a" "b" "c" "d" "e" "f" "g";
+    }
 }
 
 .grid-item-bg {
@@ -141,9 +203,21 @@ button {
     grid-area: d;
 }
 
+@media (max-width: 700px) {
+    .grid-item-beige {
+        text-align: center;
+    }
+}
+
 .grid-item-black {
     background-image: url(./images/bg-4.jpg);
     grid-area: e;
+}
+
+@media (max-width: 700px) {
+    .grid-item-black {
+        text-align: center;
+    }
 }
 
 .grid-item-human {
@@ -155,6 +229,23 @@ button {
     min-height: 715px;
 }
 
+.grid-item-human > div {
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .grid-item-human {
+        min-height: inherit;
+    }
+}
+
+@media (max-width: 700px) {
+    .grid-item-human {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
 .grid-item-green {
     background-image: url(./images/bg-6.jpg);
     grid-area: g;
@@ -164,11 +255,33 @@ button {
     min-height: 715px;
 }
 
+.grid-item-green > div {
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .grid-item-green {
+        min-height: inherit;
+    }
+}
+
+@media (max-width: 700px) {
+    .grid-item-green {
+        text-align: center;
+    }
+}
+
 .list {
     list-style-type: none;
     padding: 0;
     display: flex;
     justify-content: flex-start;
+}
+
+@media (max-width: 700px) {
+    .list {
+        justify-content: center;
+    }
 }
 
 .list li {
@@ -203,4 +316,18 @@ button {
     height: 90px;
     background-image: url(./images/ali-logo.png);
     background-repeat: no-repeat;
+}
+
+@media (max-width: 1000px) {
+    .logo {
+        width: 70px;
+        height: 70px;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 700px) {
+    .logo {
+        margin: 0 auto 25px;
+    }
 }
